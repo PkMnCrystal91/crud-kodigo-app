@@ -14,8 +14,8 @@ export const TableBody = ({ data, setApiData }) => {
     <tbody>
       <tr>
         <td scope="row">{data.id}</td>
-        <td>{data.title}</td>
-        <td>{data.body}</td>
+        <td>{data.name}</td>
+        <td>{data.description}</td>
         <td>
           <div className="d-flex gap-2">
             <button className="btn btn-primary">Update</button>

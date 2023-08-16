@@ -2,43 +2,43 @@
   "tests": [
     {
       "id": 1,
-      "title": "Building Your First RESTful API with Python Flask",
-      "body": "Step-by-step tutorial on creating a RESTful API using the Flask framework in Python."
+      "name": "Java",
+      "description": "Step-by-step tutorial on creating a RESTful API using the Flask framework in Python."
     },
     {
       "id": 3,
-      "title": "Building Your First RESTful API with Python Flask",
-      "body": "Step-by-step tutorial on creating a RESTful API using the Flask framework in Python."
+      "name": "JavaScript",
+      "description": "Step-by-step tutorial on creating a RESTful API using the Flask framework in Python."
     },
     {
       "id": 5,
-      "title": "Building Your First RESTful API with Python Flask",
-      "body": "Step-by-step tutorial on creating a RESTful API using the Flask framework in Python."
+      "name": "TypeScript",
+      "description": "Step-by-step tutorial on creating a RESTful API using the Flask framework in Python."
     },
     {
       "id": 6,
-      "title": "Responsive UI Design Principles",
-      "body": "Explore the key principles and strategies for designing responsive and user-friendly interfaces."
+      "name": "PHP",
+      "description": "Explore the key principles and strategies for designing responsive and user-friendly interfaces."
     },
     {
       "id": 7,
-      "title": "Building Your First RESTful API with Python Flask",
-      "body": "Step-by-step tutorial on creating a RESTful API using the Flask framework in Python."
+      "name": "Rubi",
+      "description": "Step-by-step tutorial on creating a RESTful API using the Flask framework in Python."
     },
     {
       "id": 8,
-      "title": "Building Your First RESTful API with Python Flask",
-      "body": "Step-by-step tutorial on creating a RESTful API using the Flask framework in Python."
+      "name": "C#",
+      "description": "Step-by-step tutorial on creating a RESTful API using the Flask framework in Python."
     },
     {
       "id": 9,
-      "title": "Building Your First RESTful API with Python Flask",
-      "body": "Step-by-step tutorial on creating a RESTful API using the Flask framework in Python."
+      "name": "Dart",
+      "description": "Step-by-step tutorial on creating a RESTful API using the Flask framework in Python."
     },
     {
       "id": 10,
-      "title": "Responsive UI Design Principles",
-      "body": "Explore the key principles and strategies for designing responsive and user-friendly interfaces."
+      "name": "C++",
+      "description": "Explore the key principles and strategies for designing responsive and user-friendly interfaces."
     }
   ]
 }

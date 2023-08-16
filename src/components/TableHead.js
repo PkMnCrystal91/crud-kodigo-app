@@ -5,8 +5,8 @@ export const TableHead = () => {
     <thead>
       <tr>
         <th scope="col">ID</th>
-        <th scope="col">Title</th>
-        <th scope="col">Body</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
         <th scope="col"></th>
       </tr>
     </thead>
