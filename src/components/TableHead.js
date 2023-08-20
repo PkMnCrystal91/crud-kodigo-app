@@ -3,10 +3,10 @@ import React from "react";
 export const TableHead = () => {
   return (
     <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Name</th>
-        <th scope="col">Description</th>
+      <tr className="text-center">
+        <th scope="col">Marca</th>
+        <th scope="col">Modelo</th>
+        <th scope="col">Precio</th>
         <th scope="col"></th>
       </tr>
     </thead>

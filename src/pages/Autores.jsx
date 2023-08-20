@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getAll } from "../api/api";
+import { getAll } from "../api/celularesEndPoint";
 import { TableBody } from "../components/TableBody";
 import { TableHead } from "../components/TableHead";
 import { SearchForm } from "../components/SearchForm";
@@ -9,10 +9,19 @@ export const Autores = () => {
   const [searchByName, setSearchByName] = useState("");
 
   useEffect(() => {
-    getAll().then((resp) => {
+    /* getAll().then((resp) => {
       console.log(resp);
       setGetData(resp);
-    });
+    }); */
+
+    getAll()
+      .then((response) => {
+        console.log(response);
+        setGetData(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
 
   const onNewSearch = (newSearch) => {
@@ -36,7 +45,11 @@ export const Autores = () => {
             })
             .map((data) => {
               return (
-                <TableBody key={data.id} data={data} setApiData={setGetData} />
+                <TableBody
+                  key={data.celularId}
+                  data={data}
+                  setApiData={setGetData}
+                />
               );
             })}
         </table>
