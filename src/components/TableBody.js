@@ -1,9 +1,8 @@
-import { useEffect } from "react";
-import { deleteAuthor, getAll } from "../api/api";
+import { getAll, deleteById } from "../api/celularesEndPoint";
 
 export const TableBody = ({ data, setApiData }) => {
   const onDelete = () => {
-    deleteAuthor(data.id).then(() => {
+    deleteById(data.celularId).then(() => {
       getAll().then((resp) => {
         setApiData(resp);
       });
@@ -13,7 +12,6 @@ export const TableBody = ({ data, setApiData }) => {
   return (
     <tbody>
       <tr className="text-center">
-        {/* <td scope="row">{data.id}</td> */}
         <td>{data.marca}</td>
         <td>{data.modelo}</td>
         <td>{data.precio}</td>

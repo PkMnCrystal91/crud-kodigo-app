@@ -16,7 +16,7 @@ export const SearchForm = ({ onNewSearch }) => {
     <form className="form-outline mt-4 mb-2" onSubmit={onFormSubmit}>
       <input
         type="search"
-        placeholder="Search by name"
+        placeholder="Search by brand"
         className="form-control"
         name="search_title"
         value={search_title}

@@ -11,3 +11,14 @@ export const getAll = () => {
       throw error;
     });
 };
+
+export const deleteById = (id) => {
+  const url = `${API_ENDPOINT_CELULARES}?id=${id}`;
+
+  return axios
+    .delete(url)
+    .then((response) => response.data)
+    .catch((error) => {
+      throw error;
+    });
+};

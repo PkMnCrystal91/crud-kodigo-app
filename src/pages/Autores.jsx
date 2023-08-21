@@ -41,7 +41,7 @@ export const Autores = () => {
             .filter((data) => {
               return searchByName.toLowerCase() === ""
                 ? data
-                : data.name.toLowerCase().includes(searchByName);
+                : data.marca.toLowerCase().includes(searchByName);
             })
             .map((data) => {
               return (
