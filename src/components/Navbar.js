@@ -36,6 +36,19 @@ export const Navbar = () => {
           >
             Authors
           </NavLink>
+
+          <NavLink
+            className={({ isActive }) =>
+              `nav-item nav-link  ${isActive ? "active" : ""}`
+            }
+            to="/VideoJuegos"
+          >
+            Video Juegos
+          </NavLink>
+
+          
+
+
         </div>
       </div>
     </nav>
