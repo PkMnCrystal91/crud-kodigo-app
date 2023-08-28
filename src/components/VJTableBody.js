@@ -9,7 +9,6 @@ export const VJTableBody = ({ data, setApiData }) => {
     });
   };
   
-  // Aplique destructuracion
 
   return (
 
