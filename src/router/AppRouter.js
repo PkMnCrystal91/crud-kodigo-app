@@ -4,7 +4,7 @@ import { Home } from "../pages/Home";
 import { Navbar } from "../components";
 import { AboutUs } from "../pages/AboutUs";
 import { Autores } from "../pages/Autores";
-
+import { Formulario } from "../pages/FormularioCelulares";
 export const AppRouter = () => {
   return (
     <>
@@ -13,6 +13,7 @@ export const AppRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/autores" element={<Autores />} />
+        <Route path="/formulario" element={<Formulario />} />
       </Routes>
     </>
   );
