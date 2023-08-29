@@ -12,7 +12,7 @@ export const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/autores" element={<Autores />} />
+        <Route path="/celulares" element={<Autores />} />
         <Route path="/formulario" element={<Formulario />} />
       </Routes>
     </>
