@@ -5,6 +5,7 @@ import { Navbar } from "../components";
 import { AboutUs } from "../pages/AboutUs";
 import { Autores } from "../pages/Autores";
 import { VideoJuegos } from '../pages/VideoJuegos'
+import { Formulario } from "../pages/FormularioCelulares";
 
 export const AppRouter = () => {
   return (
@@ -13,8 +14,10 @@ export const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/autores" element={<Autores />} />
+        <Route path="/autores" element={<Autores />}  />
         <Route path="/VideoJuegos" element={<VideoJuegos />} /> 
+        <Route path="/celulares" element={<Autores />} />
+        <Route path="/formulario" element={<Formulario />} />
       </Routes>
     </>
   );

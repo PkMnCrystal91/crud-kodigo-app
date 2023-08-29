@@ -2,18 +2,14 @@ import React, { useEffect, useState } from "react";
 import { getAll } from "../api/celularesEndPoint";
 import { TableBody } from "../components/TableBody";
 import { TableHead } from "../components/TableHead";
-import { SearchForm } from "../components/SearchForm";
+import { SearchForm } from "../components";
+import { Link } from "react-router-dom";
 
 export const Autores = () => {
   const [getData, setGetData] = useState([]);
   const [searchByName, setSearchByName] = useState("");
 
   useEffect(() => {
-    /* getAll().then((resp) => {
-      console.log(resp);
-      setGetData(resp);
-    }); */
-
     getAll()
       .then((response) => {
         console.log(response);
@@ -28,11 +24,12 @@ export const Autores = () => {
     setSearchByName(newSearch);
   };
 
-  console.log(searchByName);
-
   return (
     <div className="container">
       <SearchForm onNewSearch={(event) => onNewSearch(event)} />
+      <Link to="/formulario">
+        <button className="btn btn-success">New</button>
+      </Link>
       <div className="table-responsive-md">
         <table className="table table-hover">
           <TableHead />
