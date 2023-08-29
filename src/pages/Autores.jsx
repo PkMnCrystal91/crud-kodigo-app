@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getAll } from "../api/celularesEndPoint";
 import { TableBody } from "../components/TableBody";
 import { TableHead } from "../components/TableHead";
-import { SearchForm } from "../components/SearchForm";
+import { SearchForm, Buttons } from "../components";
 
 export const Autores = () => {
   const [getData, setGetData] = useState([]);
@@ -33,6 +33,7 @@ export const Autores = () => {
   return (
     <div className="container">
       <SearchForm onNewSearch={(event) => onNewSearch(event)} />
+      <Buttons/> 
       <div className="table-responsive-md">
         <table className="table table-hover">
           <TableHead />

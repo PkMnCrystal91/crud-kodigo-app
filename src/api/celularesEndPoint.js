@@ -22,3 +22,9 @@ export const deleteById = (id) => {
       throw error;
     });
 };
+
+export const post = async ({marca, modelo, color, precio:Number, descripcion, operadora}) => {
+  const url = API_ENDPOINT_CELULARES;
+  const data = await axios.post(url, {marca, modelo, color, precio:Number, descripcion, operadora})
+  return data
+}

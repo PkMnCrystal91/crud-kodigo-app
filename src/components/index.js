@@ -1,1 +1,3 @@
-export * from "../components/Navbar";
+export * from "./Navbar";
+export * from "./Buttons";
+export * from "./SearchForm";
