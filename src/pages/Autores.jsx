@@ -4,6 +4,7 @@ import { TableBody } from "../components/TableBody";
 import { TableHead } from "../components/TableHead";
 import { SearchForm } from "../components";
 import { Link } from "react-router-dom";
+import { BiAlignJustify } from "react-icons/bi";
 
 export const Autores = () => {
   const [getData, setGetData] = useState([]);
@@ -28,7 +29,7 @@ export const Autores = () => {
     <div className="container">
       <SearchForm onNewSearch={(event) => onNewSearch(event)} />
       <Link to="/formulario">
-        <button className="btn btn-success">New</button>
+        <button className="btn btn-primary btn-lg">New <BiAlignJustify/></button>
       </Link>
       <div className="table-responsive-md">
         <table className="table table-hover">

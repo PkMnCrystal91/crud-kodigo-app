@@ -1,6 +1,10 @@
 import { useForm } from "react-hook-form";
 import { post, getAll } from "../api/celularesEndPoint";
 import { useNavigate } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import {IoArrowRedoCircleOutline} from "react-icons/io5";
 
 export const Formulario = () => {
   const navigate = useNavigate();
@@ -23,47 +27,72 @@ export const Formulario = () => {
   };
 
   return (
-    <div className="container">
+    
+    <div >
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input id="marca" placeholder="Marca" required {...register("marca")} />
-        <br />
-        <input
-          id="modelo"
-          placeholder="Modelo "
-          required
-          {...register("modelo")}
-        />
-        <br />
-        <input
-          id="color"
-          placeholder="Color "
-          required
-          {...register("color")}
-        />
-        <br />
-        <input
-          id="precio"
-          placeholder="Precio"
-          required
-          type="number"
-          {...register("precio")}
-        />
-        <br />
-        <input
-          id="descripcion"
-          placeholder="Descripcion"
-          required
-          {...register("descripcion")}
-        />
-        <br />
-        <input
-          id="operadora"
-          placeholder="Operadora"
-          required
-          {...register("operadora")}
-        />
-        <br />
-        <input type="submit" />
+      <Form.Group  
+        className="mb-3" 
+        controlId="formBasicEmail">
+        <Form.Label>Marca</Form.Label>
+        <Form.Control
+         placeholder="Marca" 
+         id="marca"  
+         required {...register("marca")}/>
+      </Form.Group>
+
+      <Form.Group 
+        className="mb-3" 
+        controlId="formBasicEmail">
+        <Form.Label>Modelo</Form.Label>
+        <Form.Control
+         placeholder="Modelo" 
+         id="modelo"  
+         required {...register("modelo")}/>
+      </Form.Group>
+
+        <Form.Group 
+        className="mb-3" 
+        controlId="formBasicEmail">
+        <Form.Label>Color</Form.Label>
+        <Form.Control
+         placeholder="Color" 
+         id="color"  
+         required {...register("color")}/>
+      </Form.Group>
+
+      <Form.Group 
+        className="mb-3" 
+        controlId="formBasicEmail">
+        <Form.Label>Precio</Form.Label>
+        <Form.Control
+         placeholder="Precio" 
+         id="precio"
+         type="number"  
+         required {...register("precio")}/>
+      </Form.Group>
+
+      <Form.Group 
+        className="mb-3" 
+        controlId="formBasicEmail">
+        <Form.Label>Descripcion</Form.Label>
+        <Form.Control
+         placeholder="Descripcion" 
+         id="descripcion"
+         required {...register("descripcion")}/>
+      </Form.Group>
+        
+      <Form.Group 
+        className="mb-3" 
+        controlId="formBasicEmail">
+        <Form.Label>Operadora</Form.Label>
+        <Form.Control
+         placeholder="Operadora" 
+         id="operadora"
+         required {...register("operadora")}/>
+      </Form.Group>
+      <Button variant="primary" type="submit">Enviar<
+IoArrowRedoCircleOutline/>
+      </Button>
       </form>
     </div>
   );
