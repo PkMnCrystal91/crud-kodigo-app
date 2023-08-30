@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { getAll, deleteById } from "../api/celularesEndPoint";
 
 export const TableBody = ({ data, setApiData }) => {
@@ -18,7 +19,9 @@ export const TableBody = ({ data, setApiData }) => {
 
         <td>
           <div className="d-flex gap-2 justify-content-center">
-            <button className="btn btn-primary">Update</button>
+            <Link to={`/formulario/${data.celularId}`}>
+              <button className="btn btn-primary">Update</button>
+            </Link>
             <button className="btn btn-danger" onClick={onDelete}>
               Delete
             </button>

@@ -14,6 +14,7 @@ export const AppRouter = () => {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/celulares" element={<Autores />} />
         <Route path="/formulario" element={<Formulario />} />
+        <Route path="/formulario/:id" element={<Formulario />} />
       </Routes>
     </>
   );

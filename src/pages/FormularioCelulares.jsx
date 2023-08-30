@@ -1,9 +1,22 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { post, getAll } from "../api/celularesEndPoint";
-import { useNavigate } from "react-router-dom";
+import { post, getById } from "../api/celularesEndPoint";
+import { useNavigate, useParams } from "react-router-dom";
+import { useState } from "react";
 
 export const Formulario = () => {
+  const [updateData, setUpdateData] = useState({});
   const navigate = useNavigate();
+  const { id } = useParams();
+
+  useEffect(() => {
+    getById(id).then((resp) => {
+      setUpdateData(resp);
+    });
+  }, [id]);
+
+  console.log(updateData);
+
   const {
     register,
     handleSubmit,
@@ -25,6 +38,14 @@ export const Formulario = () => {
   return (
     <div className="container">
       <form onSubmit={handleSubmit(onSubmit)}>
+        {id !== undefined ? (
+          <div className="form-group">
+            <label className="form-label">ID</label>
+            <input className="form-control" value={id} readOnly disabled />
+          </div>
+        ) : (
+          ""
+        )}
         <input id="marca" placeholder="Marca" required {...register("marca")} />
         <br />
         <input
