@@ -6,6 +6,7 @@ import { AboutUs } from "../pages/AboutUs";
 import { Autores } from "../pages/Autores";
 import { VideoJuegos } from '../pages/VideoJuegos'
 import { Formulario } from "../pages/FormularioCelulares";
+import { FormularioVJ } from "../pages/FormularioVJ";
 
 export const AppRouter = () => {
   return (
@@ -18,6 +19,7 @@ export const AppRouter = () => {
         <Route path="/VideoJuegos" element={<VideoJuegos />} /> 
         <Route path="/celulares" element={<Autores />} />
         <Route path="/formulario" element={<Formulario />} />
+        <Route path="/formulario-videojuegos" element={<FormularioVJ />} />
       </Routes>
     </>
   );

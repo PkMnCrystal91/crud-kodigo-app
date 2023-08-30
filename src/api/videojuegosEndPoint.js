@@ -22,3 +22,9 @@ export const deleteById = (id) => {
       throw error;
     });
 };
+
+export const post = async ({titulo, descripcion, plataforma, precio:Number, categoria}) => {
+  const url = API_ENDPOINT_VIDEOJUEGOS;
+  const data = await axios.post(url, {titulo, descripcion, plataforma, precio:Number, categoria})
+  return data
+}
