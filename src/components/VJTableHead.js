@@ -4,8 +4,8 @@ import { FaRedoAlt, FaTrash } from "react-icons/fa";
 export const VJTableHead = () => {
   // Style for Update and Delete Icons in Header to center them with their respective buttons.
   const iconStyle = {
-    marginRight: '36px',
-    marginLeft: '36px',
+    marginRight: '38px',
+    marginLeft: '40px',
   };
   
   return (
