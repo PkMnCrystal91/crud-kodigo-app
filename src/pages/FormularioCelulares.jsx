@@ -1,9 +1,10 @@
 import { useForm } from "react-hook-form";
-import { post, getAll } from "../api/celularesEndPoint";
+import { post } from "../api/celularesEndPoint";
 import { useNavigate } from "react-router-dom";
 
 export const Formulario = () => {
   const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -18,18 +19,24 @@ export const Formulario = () => {
       .catch((error) => {
         console.log(error);
       });
-
     navigate("/");
   };
 
   return (
     <div className="container">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input id="marca" placeholder="Marca" required {...register("marca")} />
+        <input
+          id="marca"
+          placeholder="Marca"
+          name="marca"
+          required
+          {...register("marca")}
+        />
         <br />
         <input
           id="modelo"
           placeholder="Modelo "
+          name="modelo"
           required
           {...register("modelo")}
         />
@@ -37,6 +44,7 @@ export const Formulario = () => {
         <input
           id="color"
           placeholder="Color "
+          name="color"
           required
           {...register("color")}
         />
@@ -44,6 +52,7 @@ export const Formulario = () => {
         <input
           id="precio"
           placeholder="Precio"
+          name="precio"
           required
           type="number"
           {...register("precio")}
@@ -52,6 +61,7 @@ export const Formulario = () => {
         <input
           id="descripcion"
           placeholder="Descripcion"
+          name="descripcion"
           required
           {...register("descripcion")}
         />
@@ -59,6 +69,7 @@ export const Formulario = () => {
         <input
           id="operadora"
           placeholder="Operadora"
+          name="operadora"
           required
           {...register("operadora")}
         />

@@ -12,6 +12,37 @@ export const getAll = () => {
     });
 };
 
+export const getById = (id) => {
+  const url = `${API_ENDPOINT_CELULARES}/${id}`;
+
+  return axios
+    .get(url)
+    .then((response) => response.data)
+    .catch((error) => {
+      throw error;
+    });
+};
+
+export const post = async ({
+  marca,
+  modelo,
+  color,
+  precio: Number,
+  descripcion,
+  operadora,
+}) => {
+  const url = API_ENDPOINT_CELULARES;
+  const data = await axios.post(url, {
+    marca,
+    modelo,
+    color,
+    precio: Number,
+    descripcion,
+    operadora,
+  });
+  return data;
+};
+
 export const deleteById = (id) => {
   const url = `${API_ENDPOINT_CELULARES}?id=${id}`;
 
@@ -23,8 +54,13 @@ export const deleteById = (id) => {
     });
 };
 
-export const post = async ({marca, modelo, color, precio:Number, descripcion, operadora}) => {
+export const updateData = (data) => {
   const url = API_ENDPOINT_CELULARES;
-  const data = await axios.post(url, {marca, modelo, color, precio:Number, descripcion, operadora})
-  return data
-}
+
+  return axios
+    .put(url, data)
+    .then((response) => response.data)
+    .catch((error) => {
+      throw error;
+    });
+};

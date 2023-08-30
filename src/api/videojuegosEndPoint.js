@@ -12,6 +12,36 @@ export const getAll = () => {
     });
 };
 
+export const getById = (id) => {
+  const url = `${API_ENDPOINT_VIDEOJUEGOS}/${id}`;
+
+  return axios
+    .get(url)
+    .then((response) => response.data)
+    .catch((error) => {
+      throw error;
+    });
+};
+
+export const post = async ({
+  titulo,
+  descripcion,
+  plataforma,
+  precio: Number,
+  categoria,
+}) => {
+  const url = API_ENDPOINT_VIDEOJUEGOS;
+  const data = await axios.post(url, {
+    titulo,
+    descripcion,
+    plataforma,
+    precio: Number,
+    categoria,
+  });
+  return data;
+};
+
+
 export const deleteById = (id) => {
   const url = `${API_ENDPOINT_VIDEOJUEGOS}?id=${id}`;
 
@@ -23,8 +53,13 @@ export const deleteById = (id) => {
     });
 };
 
-export const post = async ({titulo, descripcion, plataforma, precio:Number, categoria}) => {
+export const updateData = (data) => {
   const url = API_ENDPOINT_VIDEOJUEGOS;
-  const data = await axios.post(url, {titulo, descripcion, plataforma, precio:Number, categoria})
-  return data
-}
+
+  return axios
+    .put(url, data)
+    .then((response) => response.data)
+    .catch((error) => {
+      throw error;
+    });
+};
