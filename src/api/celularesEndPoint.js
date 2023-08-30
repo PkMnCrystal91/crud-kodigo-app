@@ -23,17 +23,6 @@ export const getById = (id) => {
     });
 };
 
-export const deleteById = (id) => {
-  const url = `${API_ENDPOINT_CELULARES}?id=${id}`;
-
-  return axios
-    .delete(url)
-    .then((response) => response.data)
-    .catch((error) => {
-      throw error;
-    });
-};
-
 export const post = async ({
   marca,
   modelo,
@@ -52,4 +41,26 @@ export const post = async ({
     operadora,
   });
   return data;
+};
+
+export const deleteById = (id) => {
+  const url = `${API_ENDPOINT_CELULARES}?id=${id}`;
+
+  return axios
+    .delete(url)
+    .then((response) => response.data)
+    .catch((error) => {
+      throw error;
+    });
+};
+
+export const updateData = (data) => {
+  const url = API_ENDPOINT_CELULARES;
+
+  return axios
+    .put(url, data)
+    .then((response) => response.data)
+    .catch((error) => {
+      throw error;
+    });
 };

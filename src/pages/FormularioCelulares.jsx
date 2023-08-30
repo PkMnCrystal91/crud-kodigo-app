@@ -1,21 +1,9 @@
-import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { post, getById } from "../api/celularesEndPoint";
-import { useNavigate, useParams } from "react-router-dom";
-import { useState } from "react";
+import { post } from "../api/celularesEndPoint";
+import { useNavigate } from "react-router-dom";
 
 export const Formulario = () => {
-  const [updateData, setUpdateData] = useState({});
   const navigate = useNavigate();
-  const { id } = useParams();
-
-  useEffect(() => {
-    getById(id).then((resp) => {
-      setUpdateData(resp);
-    });
-  }, [id]);
-
-  console.log(updateData);
 
   const {
     register,
@@ -31,26 +19,24 @@ export const Formulario = () => {
       .catch((error) => {
         console.log(error);
       });
-
     navigate("/");
   };
 
   return (
     <div className="container">
       <form onSubmit={handleSubmit(onSubmit)}>
-        {id !== undefined ? (
-          <div className="form-group">
-            <label className="form-label">ID</label>
-            <input className="form-control" value={id} readOnly disabled />
-          </div>
-        ) : (
-          ""
-        )}
-        <input id="marca" placeholder="Marca" required {...register("marca")} />
+        <input
+          id="marca"
+          placeholder="Marca"
+          name="marca"
+          required
+          {...register("marca")}
+        />
         <br />
         <input
           id="modelo"
           placeholder="Modelo "
+          name="modelo"
           required
           {...register("modelo")}
         />
@@ -58,6 +44,7 @@ export const Formulario = () => {
         <input
           id="color"
           placeholder="Color "
+          name="color"
           required
           {...register("color")}
         />
@@ -65,6 +52,7 @@ export const Formulario = () => {
         <input
           id="precio"
           placeholder="Precio"
+          name="precio"
           required
           type="number"
           {...register("precio")}
@@ -73,6 +61,7 @@ export const Formulario = () => {
         <input
           id="descripcion"
           placeholder="Descripcion"
+          name="descripcion"
           required
           {...register("descripcion")}
         />
@@ -80,6 +69,7 @@ export const Formulario = () => {
         <input
           id="operadora"
           placeholder="Operadora"
+          name="operadora"
           required
           {...register("operadora")}
         />
