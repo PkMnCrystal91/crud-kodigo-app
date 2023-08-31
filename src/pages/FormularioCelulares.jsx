@@ -43,7 +43,7 @@ export const Formulario = () => {
       <Form.Group 
         className="mb-3" 
         controlId="formBasicEmail">
-        <Form.Label>Modelo</Form.Label>
+        <Form.Label>Modelos</Form.Label>
         <Form.Control
          placeholder="Modelo" 
          id="modelo"  
