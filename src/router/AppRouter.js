@@ -4,8 +4,11 @@ import { Home } from "../pages/Home";
 import { Navbar } from "../components";
 import { AboutUs } from "../pages/AboutUs";
 import { Autores } from "../pages/Autores";
-import { VideoJuegos } from '../pages/VideoJuegos'
+import { VideoJuegos } from "../pages/VideoJuegos";
 import { Formulario } from "../pages/FormularioCelulares";
+import { FormularioVJ } from "../pages/FormularioVJ";
+import { UpdateForm } from "../pages/UpdateForm";
+import { UpdateVJForm } from "../pages/UpdateVJForm";
 
 export const AppRouter = () => {
   return (
@@ -14,10 +17,13 @@ export const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/autores" element={<Autores />}  />
-        <Route path="/VideoJuegos" element={<VideoJuegos />} /> 
+        <Route path="/autores" element={<Autores />} />
+        <Route path="/VideoJuegos" element={<VideoJuegos />} />
         <Route path="/celulares" element={<Autores />} />
         <Route path="/formulario" element={<Formulario />} />
+        <Route path="/formulario-videojuegos" element={<FormularioVJ />} />
+        <Route path="/formulario/:id" element={<UpdateForm />} />
+        <Route path="/formulario-videojuegos/:id" element={<UpdateVJForm />} />
       </Routes>
     </>
   );

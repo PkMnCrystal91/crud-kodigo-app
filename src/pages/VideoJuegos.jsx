@@ -3,6 +3,7 @@ import { getAll } from "../api/videojuegosEndPoint";
 import { SearchForm } from "../components/SearchForm";
 import { VJTableHead } from "../components/VJTableHead";
 import { VJTableBody } from "../components/VJTableBody";
+import { Link } from "react-router-dom";
 
 export const VideoJuegos = () => {
   const [getData, setGetData] = useState([]);
@@ -33,6 +34,9 @@ export const VideoJuegos = () => {
   return (
     <div className="container">
       <SearchForm onNewSearch={(event) => onNewSearch(event)} />
+      <Link to="/formulario-videojuegos">
+        <button className="btn btn-success">New</button>
+      </Link>
       <div className="table-responsive-md">
         <table className="table table-hover">
           <VJTableHead />

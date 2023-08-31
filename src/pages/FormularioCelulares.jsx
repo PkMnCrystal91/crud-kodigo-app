@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { post, getAll } from "../api/celularesEndPoint";
+import { post } from "../api/celularesEndPoint";
 import { useNavigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
@@ -8,6 +8,7 @@ import {IoArrowRedoCircleOutline} from "react-icons/io5";
 
 export const Formulario = () => {
   const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -22,7 +23,6 @@ export const Formulario = () => {
       .catch((error) => {
         console.log(error);
       });
-
     navigate("/");
   };
 
