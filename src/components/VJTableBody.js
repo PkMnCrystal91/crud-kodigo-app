@@ -22,9 +22,11 @@ export const VJTableBody = ({ data, setApiData }) => {
 
         <td>
           <div className="d-flex gap-2 justify-content-center">
+            <Link to={`/formulario-videojuegos/${data.juegoId}`}>
             <button className="btn btn-primary">
               <FaRedoAlt /> Update
             </button>
+            </Link>
             <button className="btn btn-danger" onClick={onDelete}>
               <FaTrash /> Delete
             </button>
