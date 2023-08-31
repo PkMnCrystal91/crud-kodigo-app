@@ -90,7 +90,7 @@ export const Formulario = () => {
          id="operadora"
          required {...register("operadora")}/>
       </Form.Group>
-      <Button variant="primary" type="submit">Enviar<
+      <Button variant="primary" type="submit">Enviar <
 IoArrowRedoCircleOutline/>
       </Button>
       </form>
