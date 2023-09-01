@@ -1,6 +1,10 @@
 import { useForm } from "react-hook-form";
 import { post, getAll } from "../api/videojuegosEndPoint";
 import { useNavigate } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import {IoArrowRedoCircleOutline} from "react-icons/io5";
 
 export const FormularioVJ = () => {
   const navigate = useNavigate();
@@ -23,41 +27,58 @@ export const FormularioVJ = () => {
   };
 
   return (
-    <div className="container">
+    <div >
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input id="titulo" placeholder="titulo" required {...register("titulo")} />
-        <br />
-        <input
-          id="descripcion"
-          placeholder="descripcion "
-          required
-          {...register("descripcion")}
-        />
-        <br />
-        <input
-          id="plataforma"
-          placeholder="plataforma "
-          required
-          {...register("plataforma")}
-        />
-        <br />
-        <input
-          id="precio"
-          placeholder="Precio"
-          required
-          type="number"
-          {...register("precio")}
-        />
-        <br />
-        <input
-          id="categoria"
-          placeholder="categoria"
-          required
-          {...register("categoria")}
-        />
-        <br />
-        <input type="submit" />
+       <Form.Group  
+        className="mb-3">
+        <Form.Label>Descripcion</Form.Label>
+        <Form.Control
+        placeholder="Descripcion" 
+        id="descripcion"  
+        required {...register("descripcion")}/>
+       </Form.Group>
+
+       <Form.Group  
+        className="mb-3">
+        <Form.Label>titulo</Form.Label>
+        <Form.Control
+        placeholder="titulo" 
+        id="titulo"  
+        required {...register("titulo")}/>
+       </Form.Group>
+
+       <Form.Group  
+        className="mb-3">
+        <Form.Label>plataforma</Form.Label>
+        <Form.Control
+        placeholder="plataforma" 
+        id="plataforma"  
+        required {...register("plataforma")}/>
+       </Form.Group>
+
+       <Form.Group  
+        className="mb-3">
+        <Form.Label>Precio</Form.Label>
+        <Form.Control
+        placeholder="Precio" 
+        id="Precio"  
+        required {...register("Precio")}/>
+       </Form.Group>
+       
+       <Form.Group  
+        className="mb-3">
+        <Form.Label>categoria</Form.Label>
+        <Form.Control
+        placeholder="categoria" 
+        id="categoria"  
+        required {...register("categoria")}/>
+       </Form.Group>
+       
+       <Button variant="primary" type="submit">Enviar <
+IoArrowRedoCircleOutline/>
+      </Button>
       </form>
     </div>
+    
   );
 };
